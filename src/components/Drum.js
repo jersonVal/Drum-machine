@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
 import BtnToggle from './Btn-toggle';
 
-const Drum = ()=>{
+const Drum = () => {
 
-    const sound = ()=>{
-        if(mode){
+    const sound = () => {
+        if (mode) {
             return {
                 Q: {
                     name: "Heater-1",
@@ -44,8 +44,8 @@ const Drum = ()=>{
                     src: "https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
                 }
             }
-        }else{
-            return{
+        } else {
+            return {
                 Q: {
                     name: "Chord-1",
                     src: "https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"
@@ -86,29 +86,31 @@ const Drum = ()=>{
         }
     }
 
-    const [power,setPower] = useState(true);
-    const [mode,setMode] = useState(true);
-    const [audio,setAudio] = useState('Heater Kit');
+    const [power, setPower] = useState(true);
+    const [mode, setMode] = useState(true);
+    const [audio, setAudio] = useState('Heater Kit');
 
-    document.onkeyup = (e)=> {
-        const audio = document.querySelector(`#${e.key.toUpperCase()}`)   
-        if(audio !== null){
-            audio.play();
+    document.onkeyup = (e) => {
+        if (power) {
+            const audio = document.querySelector(`#${e.key.toUpperCase()}`)
+            if (audio !== null) {
+                audio.play();
+            }
         }
     }
 
-    return(
+    return (
         <div className="drum" id='drum-machine'>
             <div className="drum-btns-container">
-            <Button name='Q' title={sound()['Q']['name']} src={sound()['Q']['src']} setTitle={setAudio} power={power}/>
-            <Button name='W' title={sound()['W']['name']} src={sound()['W']['src']} setTitle={setAudio} power={power}/>
-            <Button name='E' title={sound()['E']['name']} src={sound()['E']['src']} setTitle={setAudio} power={power}/>
-            <Button name='A' title={sound()['A']['name']} src={sound()['A']['src']} setTitle={setAudio} power={power}/>
-            <Button name='S' title={sound()['S']['name']} src={sound()['S']['src']} setTitle={setAudio} power={power}/>
-            <Button name='D' title={sound()['D']['name']} src={sound()['D']['src']} setTitle={setAudio} power={power}/>
-            <Button name='Z' title={sound()['Z']['name']} src={sound()['Z']['src']} setTitle={setAudio} power={power}/>
-            <Button name='X' title={sound()['X']['name']} src={sound()['X']['src']} setTitle={setAudio} power={power}/>
-            <Button name='C' title={sound()['C']['name']} src={sound()['C']['src']} setTitle={setAudio} power={power}/>
+                <Button name='Q' title={sound()['Q']['name']} src={sound()['Q']['src']} setTitle={setAudio} power={power} />
+                <Button name='W' title={sound()['W']['name']} src={sound()['W']['src']} setTitle={setAudio} power={power} />
+                <Button name='E' title={sound()['E']['name']} src={sound()['E']['src']} setTitle={setAudio} power={power} />
+                <Button name='A' title={sound()['A']['name']} src={sound()['A']['src']} setTitle={setAudio} power={power} />
+                <Button name='S' title={sound()['S']['name']} src={sound()['S']['src']} setTitle={setAudio} power={power} />
+                <Button name='D' title={sound()['D']['name']} src={sound()['D']['src']} setTitle={setAudio} power={power} />
+                <Button name='Z' title={sound()['Z']['name']} src={sound()['Z']['src']} setTitle={setAudio} power={power} />
+                <Button name='X' title={sound()['X']['name']} src={sound()['X']['src']} setTitle={setAudio} power={power} />
+                <Button name='C' title={sound()['C']['name']} src={sound()['C']['src']} setTitle={setAudio} power={power} />
             </div>
             <div className="info-container">
                 <BtnToggle title='Power' setter={setPower} setTitle={setAudio} />
@@ -117,7 +119,7 @@ const Drum = ()=>{
                 </div>
                 <BtnToggle title='Bank' setter={setMode} setTitle={setAudio} />
             </div>
-            
+
         </div>
     )
 }
