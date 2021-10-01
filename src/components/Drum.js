@@ -93,18 +93,18 @@ const Drum = ()=>{
     return(
         <div className="drum">
             <div className="drum-btns-container">
-            <Button name='Q' title={sound()[0]['name']} src={sound()[0]['src']} setTitle={setAudio}/>
-            <Button name='W' title={sound()[1]['name']} src={sound()[1]['src']} setTitle={setAudio}/>
-            <Button name='E' title={sound()[2]['name']} src={sound()[2]['src']} setTitle={setAudio}/>
-            <Button name='A' title={sound()[3]['name']} src={sound()[3]['src']} setTitle={setAudio}/>
-            <Button name='S' title={sound()[4]['name']} src={sound()[4]['src']} setTitle={setAudio}/>
-            <Button name='D' title={sound()[5]['name']} src={sound()[5]['src']} setTitle={setAudio}/>
-            <Button name='Z' title={sound()[6]['name']} src={sound()[6]['src']} setTitle={setAudio}/>
-            <Button name='X' title={sound()[7]['name']} src={sound()[7]['src']} setTitle={setAudio}/>
-            <Button name='C' title={sound()[8]['name']} src={sound()[8]['src']} setTitle={setAudio}/>
+            <Button name='Q' title={sound()[0]['name']} src={sound()[0]['src']} setTitle={setAudio} power={power}/>
+            <Button name='W' title={sound()[1]['name']} src={sound()[1]['src']} setTitle={setAudio} power={power}/>
+            <Button name='E' title={sound()[2]['name']} src={sound()[2]['src']} setTitle={setAudio} power={power}/>
+            <Button name='A' title={sound()[3]['name']} src={sound()[3]['src']} setTitle={setAudio} power={power}/>
+            <Button name='S' title={sound()[4]['name']} src={sound()[4]['src']} setTitle={setAudio} power={power}/>
+            <Button name='D' title={sound()[5]['name']} src={sound()[5]['src']} setTitle={setAudio} power={power}/>
+            <Button name='Z' title={sound()[6]['name']} src={sound()[6]['src']} setTitle={setAudio} power={power}/>
+            <Button name='X' title={sound()[7]['name']} src={sound()[7]['src']} setTitle={setAudio} power={power}/>
+            <Button name='C' title={sound()[8]['name']} src={sound()[8]['src']} setTitle={setAudio} power={power}/>
             </div>
             <div className="info-container">
-                <BtnToggle title='Power' setter={setPower}  />
+                <BtnToggle title='Power' setter={setPower} setTitle={setAudio} />
                 <div className="title-container">
                     <p>{audio}</p>
                 </div>

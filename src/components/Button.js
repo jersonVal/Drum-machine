@@ -1,14 +1,17 @@
 import React from 'react';
 
-const Button = ({name, title, src, setTitle})=>{
+const Button = ({ name, title, src, setTitle, power }) => {
 
-    const play = ()=>{
+    const play = () => {
         const audio = document.querySelector(`#${name}`);
-        audio.play();
-        setTitle(title)
+        if (power) {
+            audio.play();
+            setTitle(title)
+        }
+
     }
 
-    return(
+    return (
         <div className="btn" onClick={play}>
             <span>{name}</span>
             <audio src={src} id={name}></audio>

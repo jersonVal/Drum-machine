@@ -9,6 +9,8 @@ const BtnToggle = ({title, setter, setTitle})=>{
 
             if(title === 'Bank'){
                 setTitle('Heater Kit')
+            }else{
+                setTitle('ON')
             }
 
             e.target.style.marginLeft = '';
@@ -17,6 +19,8 @@ const BtnToggle = ({title, setter, setTitle})=>{
 
             if(title === 'Bank'){
                 setTitle('Smooth Piano Kit')
+            }else{
+                setTitle('OFF')
             }
             
             e.target.style.marginLeft = 'auto'
