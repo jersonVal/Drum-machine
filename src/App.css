@@ -47,10 +47,11 @@ p{
   border-radius: 0.2rem;
 }
 
-.btn-toggle-container{
+.btn-toggle-container, .info-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .btn-toggle-container p{
@@ -85,4 +86,30 @@ p{
   border-radius: 0.2rem;
 }
 
+.btn{
+  width: 90%;
+  height: 4rem;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px 0px black;
+  cursor: pointer;
+}
+
+.btn span{
+  font-weight: bolder;
+}
+
+.btn:hover{
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.drum-btns-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 0 1rem;
+}
 

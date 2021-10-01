@@ -11,7 +11,15 @@ const Drum = ()=>{
     return(
         <div className="drum">
             <div className="drum-btns-container">
-            <Button />
+            <Button name='Q' />
+            <Button name='W' />
+            <Button name='E' />
+            <Button name='A' />
+            <Button name='S' />
+            <Button name='D' />
+            <Button name='Z' />
+            <Button name='X' />
+            <Button name='C' />
             </div>
             <div className="info-container">
                 <BtnToggle title='Power' setter={setPower} />
